@@ -3,19 +3,22 @@ import argparse
 
 
 def beep_it():
-    for fac in range(1, 20):
-        Beep(fac * 100, 200)
+    for factor in range(1, 20):
+        Beep(factor * 100, 200)
+
+
+def beep_for_times(times):
+    for _ in range(times):
+        beep_it()
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('num', nargs='?', default=1)
+    parser.add_argument('num', nargs='?', default=1, type=int)
 
     args = parser.parse_args()
-    print(args.num)
 
-    for _ in range(1):
-        beep_it()
+    beep_for_times(args.num)
 
 if __name__ == '__main__':
     main()

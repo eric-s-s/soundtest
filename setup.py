@@ -2,10 +2,11 @@ from setuptools import setup
 
 
 def readme():
-    return 'just type sound_test'
+    with open('README.rst') as f:
+        return f.read()
 
 setup(name='soundtest',
-      version='1.0.3',
+      version='1.0.4',
       description='play sounds on windows',
       long_description=readme(),
       keywords='',
