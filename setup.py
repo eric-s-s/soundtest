@@ -6,7 +6,7 @@ def readme():
         return f.read()
 
 setup(name='soundtest',
-      version='1.0.4',
+      version='1.1.0',
       description='play sounds on windows',
       long_description=readme(),
       keywords='',
@@ -23,7 +23,8 @@ setup(name='soundtest',
       ],
       packages=['soundtest'],
       entry_points={
-          'console_scripts': ['soundtest=soundtest.soundtest:main'],
+          'console_scripts': ['soundtest=soundtest.soundtest:main',
+                              'hearingtest=soundtest.hearingtest:hearing_test'],
       },
       install_requires=[],
       include_package_data=True,
